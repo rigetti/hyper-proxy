@@ -1,9 +1,9 @@
 [package]
-name = "hyper-http-proxy"
+name = "rigetti-hyper-proxy"
 version = "1.1.1"
 authors = ["MetalBear Tech LTD <hi@metalbear.co>"]
 description = "A proxy connector for Hyper-based applications"
-documentation = "https://docs.rs/hyper-http-proxy"
+documentation = "https://docs.rs/rigetti-hyper-proxy"
 repository = "https://github.com/metalbear-co/hyper-http-proxy"
 readme = "README.md"
 keywords = ["hyper", "proxy", "tokio", "ssl"]

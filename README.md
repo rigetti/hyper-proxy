@@ -1,8 +1,8 @@
-# hyper-http-proxy
+# rigetti-hyper-proxy
 
 [![Checks](https://github.com/metalbear-co/hyper-http-proxy/actions/workflows/checks.yaml/badge.svg)](https://github.com/metalbear-co/hyper-http-proxy/actions/workflows/checks.yaml)
 [![MIT licensed](https://img.shields.io/github/license/metalbear-co/hyper-http-proxy)](./LICENSE-MIT.md)
-[![crates.io](https://img.shields.io/crates/v/hyper-http-proxy)](https://crates.io/crates/hyper-http-proxy)
+[![crates.io](https://img.shields.io/crates/v/rigetti-hyper-proxy)](https://crates.io/crates/rigetti-hyper-proxy)
 
 A proxy connector for [hyper][1] based applications.
 
@@ -17,7 +17,7 @@ use bytes::Bytes;
 use headers::Authorization;
 use http_body_util::{BodyExt, Empty};
 use hyper::{Request, Uri};
-use hyper_http_proxy::{Proxy, ProxyConnector, Intercept};
+use rigetti_hyper_proxy::{Proxy, ProxyConnector, Intercept};
 use hyper_util::client::legacy::Client;
 use hyper_util::client::legacy::connect::HttpConnector;
 use hyper_util::rt::TokioExecutor;
@@ -68,7 +68,7 @@ async fn main() -> Result<(), Box<dyn Error>> {
 
 ## Features
 
-`hyper-http-proxy` exposes Cargo features, to configure which TLS implementation it uses to
+`rigetti-hyper-proxy` exposes Cargo features, to configure which TLS implementation it uses to
 connect to a proxy. It can also be configured without TLS support, by compiling without default
 features entirely. The supported list of configurations is:
 
@@ -97,4 +97,4 @@ The core part as just been extracted and slightly enhanced.
 
 [1]: https://crates.io/crates/hyper
 [2]: https://github.com/seanmonstar/reqwest
-[3]: https://docs.rs/hyper-http-proxy
+[3]: https://docs.rs/rigetti-hyper-proxy

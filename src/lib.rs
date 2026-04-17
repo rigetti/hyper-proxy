@@ -519,7 +519,11 @@ fn proxy_dst(dst: &Uri, proxy: &Uri) -> io::Result<Uri> {
                 .ok_or_else(|| io_err(format!("proxy uri missing host: {}", proxy)))?
                 .clone(),
         )
-        .path_and_query(dst.path_and_query().unwrap().clone())
+        .path_and_query(
+            dst.path_and_query()
+                .ok_or_else(|| io_err(format!("dst uri missing path: {}", proxy)))?
+                .clone(),
+        )
         .build()
         .map_err(|err| io_err(format!("other error: {}", err)))
 }
