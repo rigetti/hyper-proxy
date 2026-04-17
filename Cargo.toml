@@ -13,14 +13,14 @@ edition = "2021"
 rust-version = "1.70.0"
 
 [dependencies]
-tokio = { version = "1.35", features = ["io-std", "io-util"] }
+tokio = { version = "1.47", features = ["io-std", "io-util"] }
 hyper = { version = "1", features = ["client"] }
 hyper-util = { version = "0.1", features = ["client", "client-legacy", "tokio"] }
 
 tower-service = "0.3"
 http = "1"
 futures-util = { version = "0.3", default-features = false }
-bytes = "1.5"
+bytes = "1.11"
 pin-project-lite = "0.2"
 hyper-tls = { version = "0.6", optional = true }
 tokio-native-tls = { version = "0.3", optional = true }
@@ -28,12 +28,12 @@ native-tls = { version = "0.2", optional = true }
 tokio-rustls = { version = "0.26", optional = true, default-features = false}
 hyper-rustls = { version = "0.27", optional = true, default-features = false }
 
-webpki-roots = { version = "0.26", optional = true }
+webpki-roots = { version = "1.0", optional = true }
 headers = "0.4"
 
 [dev-dependencies]
-tokio = { version = "1.35", features = ["full"] }
-hyper = { version = "1.0", features = ["client", "http1"] }
+tokio = { version = "1.47", features = ["full"] }
+hyper = { version = "1.9", features = ["client", "http1"] }
 hyper-util = { version = "0.1", features = ["client", "client-legacy", "http1", "tokio"] }
 http-body-util = "0.1"
 futures = "0.3"
