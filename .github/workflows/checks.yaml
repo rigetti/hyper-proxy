@@ -28,11 +28,8 @@ jobs:
           reporter: 'github-pr-check'
           github_token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Run tests default
-        run: cargo test
-      - name: Run tests rustls-tls-webpki-roots
-        run: cargo test --no-default-features --features rustls-tls-webpki-roots
-      - name: Run tests native-tls-vendored
-        run: cargo test --no-default-features --features native-tls-vendored
-      - name: Run tests native-tls
-        run: cargo test --no-default-features --features native-tls
+      - name: Install cargo-hack
+        uses: taiki-e/install-action@cargo-hack
+
+      - name: Run tests on each feature (excluding the helper features marked with `__`)
+        run: cargo hack --each-feature --skip __tls --skip __rustls test
