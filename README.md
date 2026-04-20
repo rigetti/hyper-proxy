@@ -1,7 +1,7 @@
 # rigetti-hyper-proxy
 
-[![Checks](https://github.com/metalbear-co/hyper-http-proxy/actions/workflows/checks.yaml/badge.svg)](https://github.com/metalbear-co/hyper-http-proxy/actions/workflows/checks.yaml)
-[![MIT licensed](https://img.shields.io/github/license/metalbear-co/hyper-http-proxy)](./LICENSE-MIT.md)
+[![Checks](https://github.com/rigetti/hyper-proxy/actions/workflows/checks.yaml/badge.svg)](https://github.com/rigetti/hyper-proxy/actions/workflows/checks.yaml/badge.svg)
+[![MIT licensed](https://img.shields.io/badge/license-MIT-blue)](./LICENSE-MIT.md)
 [![crates.io](https://img.shields.io/crates/v/rigetti-hyper-proxy)](https://crates.io/crates/rigetti-hyper-proxy)
 
 A proxy connector for [hyper][1] based applications.
