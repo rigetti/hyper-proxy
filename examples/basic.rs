@@ -4,10 +4,10 @@ use bytes::Bytes;
 use headers::Authorization;
 use http_body_util::{BodyExt, Empty};
 use hyper::{Request, Uri};
-use rigetti_hyper_proxy::{Intercept, Proxy, ProxyConnector};
 use hyper_util::client::legacy::connect::HttpConnector;
 use hyper_util::client::legacy::Client;
 use hyper_util::rt::TokioExecutor;
+use rigetti_hyper_proxy::{Intercept, Proxy, ProxyConnector};
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn Error>> {
