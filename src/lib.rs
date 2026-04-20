@@ -302,7 +302,10 @@ impl<C> ProxyConnector<C> {
     pub fn new(connector: C) -> Result<Self, io::Error> {
         let config = tokio_rustls::rustls::ClientConfig::builder();
 
-        #[cfg(feature = "rustls-tls-native-roots")]
+        #[cfg(all(
+            feature = "rustls-tls-native-roots",
+            not(feature = "rustls-tls-webpki-roots")
+        ))]
         let config = config.with_native_roots()?;
 
         #[cfg(feature = "rustls-tls-webpki-roots")]
